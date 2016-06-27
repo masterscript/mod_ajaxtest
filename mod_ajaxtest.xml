@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module"
+           version="2.5"
+           method="upgrade">
+	<name>Ajax test</name>
+	<creationDate>June 7, 2016</creationDate>
+	<author>Sergey Gorbov</author>
+	<authorUrl>mastescript</authorUrl>
+	<copyright>Copyright (C) 2016 All rights reserved.</copyright>
+	<license>GNU General Public License version 2, or later.</license>
+	<version>1.0.1</version>
+	<description>MOD_SESSION_DESC</description>
+
+	<files>
+		<filename module="mod_ajaxtest">mod_ajaxtest.php</filename>
+		<filename>helper.php</filename>
+		<folder>tmpl</folder>
+                <folder>mysql</folder>
+	</files>
+
+	<languages>
+		<language tag="en-GB">language/en-GB/en-GB.mod_ajaxtest.ini</language>
+	</languages>
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="format"
+				       type="list"
+				       default="debug"
+				       label="MOD_SESSION_FORMAT_LABEL"
+				       description="MOD_SESSION_FORMAT_DESC">
+					<option value="debug">Debug</option>
+					<option value="raw">Raw</option>
+					<option value="json">JSON</option>
+				</field>
+
+				<field name="loadJquery"
+				       type="list"
+				       default="1"
+				       label="MOD_SESSION_LOAD_JQUERY_LABEL"
+				       description="MOD_SESSION_LOAD_JQUERY_DESC">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+
+				<field name="node"
+				       type="text"
+				       default="data"
+				       label="MOD_SESSION_NODE_LABEL"
+				       description="MOD_SESSION_NODE_DESC"/>
+			</fieldset>
+		</fields>
+	</config>
+
+        <install>
+             <sql>
+                  <file driver="mysql" charset="utf8">mysql/install.mysql.utf8.sql</file>
+             </sql>
+        </install>
+        <uninstall>
+             <sql>
+                  <file driver="mysql" charset="utf8">mysql/uninstall.mysql.utf8.sql</file>
+             </sql>
+        </uninstall>
+
+</extension>
