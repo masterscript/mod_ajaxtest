@@ -3,10 +3,10 @@
 /**
  *
  * File       mod_session.php
- * Created    5/22/13 6:43 AM
- * Author     Matt Thomas | matt@betweenbrain.com | http://betweenbrain.com
- * Support    https://github.com/betweenbrain/
- * Copyright  Copyright (C) 2013 betweenbrain llc. All Rights Reserved.
+ * Created    27/06/16 10:50 PM
+ * Author     Sergey Gorbov | mastescript@gmail.com |
+ * Support    https://github.com/masterscript
+ * Copyright  Copyright (C) 2016  llc. All Rights Reserved.
  * License    GNU General Public License version 2, or later.
  */
 
@@ -31,7 +31,7 @@ $js = <<<JS
 			action  = $(this).attr('class'),
 			request = {
 					'option' : 'com_ajax',
-					'module' : 'session',
+					'module' : 'ajaxtest',
 					'cmd'    : action,
 					'data'   : value,
 					'format' : '{$format}'

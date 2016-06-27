@@ -9,7 +9,8 @@
  * License    GNU General Public License version 2, or later.
  */
 
-class modSessionHelper {
+//class modSessionHelper {
+class modajaxtestHelper {
 
 	public static function getAjax() {
 
